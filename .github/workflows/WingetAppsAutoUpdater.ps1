@@ -26,8 +26,9 @@ if (
     Set-Location $installer.FullName
 
     # Run the winget upgrade
-    .\winget.exe upgrade --all -h --accept-package-agreements --accept-source-agreements --include-unknown
+    .\winget.exe upgrade --all -h --accept-package-agreements --accept-source-agreements --include-unknown --force
 
 } else {
     Write-Output "The system does not meet the minimum requirements. This script requires Windows 10 1809 or later, any version of Windows 11, or Windows Server 2022."
+
 }
